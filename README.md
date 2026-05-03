@@ -50,4 +50,4 @@ La aplicación está preparada para gestionar diferentes escenarios y guiar al u
    ![Captura Error Conexión API](public/capturas/captura_pantalla_error_conexion_API.png)
 
 # 5. Link repositorio en GitHub
-   ([Ejercicio-2-3-Trimestre_App-Pokemon](https://github.com/albertogarcia92/Ejercicio-2-3-Trimestre_App-Pokemon.git)).
+   ([Ejercicio-2-3-Trimestre_App-Pokemon](https://github.com/albertogarcia92/Ejercicio_App-Pokemon.git)).
