@@ -1,0 +1,18 @@
+<div class="container text-center mt-5">
+    <h1 class="mb-5">¡Bienvenido!</h1>
+
+    <p class="mb-5">
+        En esta aplicación podrás encontrar al Pokémon que estás buscando.
+        <img src="/icono_pokeball.png" alt="Pokebola" style="width: 24px; height: auto;">
+      </p>
+
+        <p class="mb-2">¿Sabes su ID, su Nombre o su Tipo?</p>
+        <button class="btn btn-primary mb-5" [routerLink]="['/buscador']">
+            Accede al Formulario
+        </button>
+
+        <p class="mb-2">¿Prefieres encontrarlo por tu cuenta en nuestra lista?</p>
+        <button class="btn btn-primary" [routerLink]="['/listado']">
+            Accede a la Lista
+        </button>
+</div>

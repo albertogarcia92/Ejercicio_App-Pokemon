@@ -1,0 +1,20 @@
+<div class="container mt-5 w-50">
+    <h3 class="text-center mb-4">Lista de Pokémon</h3>
+
+    <div class="container mx-auto">
+        @for (item of lista; track $index) {
+        <ul class="list-group list-group-horizontal mb-2">
+
+            <li class="list-group-item">Nº{{ extraerId(item.url) }}</li>
+
+            <li class="list-group-item flex-grow-1 text-capitalize">Nombre: {{item.name}}</li>
+
+            <li class="list-group-item">
+                <button class="btn btn-primary btn-sm" [routerLink]="['/detalle', extraerId(item.url)]">
+                    Ver detalle
+                </button>
+            </li>
+        </ul>
+        }
+    </div>
+</div>

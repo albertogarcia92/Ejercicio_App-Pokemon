@@ -1,0 +1,34 @@
+<div class="container mt-5 w-75 text-center">
+    <h3 class=" mb-4">Formulario de búsqueda</h3>
+
+    <div class="container">
+        <input type="text" placeholder="Introduce su ID (Requerido)" class="form-control mb-3"
+            [(ngModel)]="idFormulario" required />
+
+        <input type="text" placeholder="Introduce su Nombre (Opcional)" class="form-control mb-3"
+            [(ngModel)]="nombreFormulario" />
+
+        <select class="form-select mb-3" placeholder="Selecciona uno de los diferentes tipos"
+            [(ngModel)]="tipoFormulario">
+            <option value="-1" disabled>Selecciona uno de los diferentes tipos</option>
+            @for (item of tiposLista; track item.name) {
+            <option class="text-capitalize" [value]="item.name">{{ item.name }}</option>
+            }
+        </select>
+        <button class="btn btn-primary mb-4" (click)="ejecutarBusqueda()">Buscar Pokémon</button>
+
+        @if (nombrePkEncontrado()) {
+        <div class="alert alert-success w-50 mx-auto">
+            <p>¡Coincidencia Encontrada!</p>
+            <h5 class="fw-bold text-capitalize mb-3">{{ nombrePkEncontrado()}}</h5>
+            <button class="btn btn-primary" [routerLink]="['/detalle', idPkEncontrado()]">Ver detalle</button>
+        </div>
+        }
+
+        @if (mensajeError()) {
+        <div class="alert alert-warning mx-auto">
+            {{ mensajeError() }}
+        </div>
+        }
+    </div>
+</div>
